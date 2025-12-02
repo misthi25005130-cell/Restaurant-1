@@ -1,0 +1,205 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlavourFusion Bistro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #fff8f0;
+      color: #333;
+    }
+    header {
+      background-color: #d35400;
+      color: white;
+      padding: 1em 2em;
+      text-align: center;
+    }
+    nav {
+      margin-top: 0.5em;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #d35400;
+      border-bottom: 2px solid #d35400;
+      padding-bottom: 0.3em;
+    }
+    ul.menu {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul.menu li {
+      margin: 1em 0;
+      padding: 1em;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+    }
+    .dish {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .price {
+      color: #d35400;
+    }
+    form {
+      background-color: #f2e6d9;
+      padding: 1.5em;
+      border-radius: 8px;
+      max-width: 400px;
+      margin-top: 1em;
+    }
+    form label {
+      display: block;
+      margin: 0.5em 0 0.2em;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 0.5em;
+      margin-bottom: 1em;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background-color: #d35400;
+      color: white;
+      border: none;
+      padding: 0.7em;
+      width: 100%;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #e67e22;
+    }
+    .reviews {
+      background-color: #fce8d7;
+      padding: 1em;
+      border-radius: 8px;
+      max-width: 600px;
+      margin-top: 1em;
+    }
+    .review {
+      margin-bottom: 1em;
+      border-bottom: 1px solid #d35400;
+      padding-bottom: 0.5em;
+    }
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #d35400;
+      color: white;
+      margin-top: 3em;
+    }
+    .success-message {
+      color: blue
+      font-weight: bold;
+      margin-top: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FlavourFusion Bistro</h1>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#reservation">Reservation</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+  </header>
+
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <ul class="menu">
+      <li><span class="dish">Classic Margherita Pizza</span><span class="price">₹1000</span></li>
+      <li><span class="dish">Mac & Cheese</span><span class="price">₹800</span></li>
+      <li><span class="dish">Spaghetti Carbonara</span><span class="price">₹900</span></li>
+      <li><span class="dish">Grilled Exotic Veggie & Feta Salad</span><span class="price">₹500</span></li>
+      <li><span class="dish">Cendol</span><span class="price">₹700</span></li>
+    </ul>
+  </section>
+
+  <section id="reservation">
+    <h2>Book a Table</h2>
+    <form id="reservationForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="time">Time:</label>
+      <select id="time" name="time" required>
+        <option value="">Select a time</option>
+        <option>6:00 PM</option>
+        <option>6:30 PM</option>
+        <option>7:00 PM</option>
+        <option>7:30 PM</option>
+        <option>8:00 PM</option>
+      </select>
+
+      <label for="partySize">Party Size:</label>
+      <select id="partySize" name="partySize" required>
+        <option value="">Select party size</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5+</option>
+      </select>
+
+      <button type="submit">Reserve Now</button>
+      <p class="success-message" id="successMessage" style="display:none;">Thank you! Your reservation is confirmed.</p>
+    </form>
+  </section>
+
+  <section id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="reviews">
+      <div class="review">
+        <p><strong>Alia Oberoi</strong> - "The ambiance was perfect for a cozy evening."</p>
+      </div>
+      <div class="review">
+        <p><strong>Joy Khurana</strong> - "Cozy atmosphere and delicious dishes. Will be back soon."</p>
+      </div>
+      
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 FlavourFusion Bistro. All Rights Reserved.
+  </footer>
+
+  <script>
+    document.getElementById('reservationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Here we would normally send data to a server
+      document.getElementById('successMessage').style.display = 'block';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
